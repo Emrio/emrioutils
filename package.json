@@ -4,13 +4,17 @@
   "description": "A utility package for my projects",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "version": "node test/version.js"
   },
   "keywords": [
     "utility",
     "emrio"
   ],
   "author": "Emrio (https://emrio.fr)",
-  "license": "ISC",
-  "git": "emrioutils"
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/TheEmrio/emrioutils.git"
+  }
 }
