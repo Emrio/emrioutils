@@ -1,10 +1,13 @@
 # emrioutils
-A utility package for my projects
+A utility package for my projects<br>
 
 [Site](https://emrio.fr/emrioutils)
 [Docs](https://github.com/TheEmrio/emrioutils/)
 [Twitter](https://twitter.com/TheEmrio)
 [Github](https://github.com/TheEmrio/emrioutils)
+
+Note: emrioutils is released under [MIT License](https://raw.githubusercontent.com/TheEmrio/emrioutils/master/LICENSE)
+
 
 ### Installing
 
