@@ -32,3 +32,37 @@ var marks = [9, 7, 8.5, 10, 6] // My marks (/10)
 
 console.log("Your average mark is " + emrioutils.mean(marks) + "/10") // This will output "Your average mark is 8.1/10"
 ```
+
+### `isInt(number)`
+
+Checks if a given input is an integer
+
+Example:
+
+```js
+console.log(emrioutils.isInt(42)) // Returns true
+
+console.log(emrioutils.isInt(3.1415)) // Returns false
+
+console.log(emrioutils.isInt(Infinity)) // Returns false
+```
+
+### `isPlainObject(obj)`
+
+Checks if a given input is a plain object (is not an array nor null : just a simple object with `{}`)
+
+Example:
+
+```js
+var my_obj = { prop: "hi!", prop2: "bye!" }
+var my_arr = [1, 42, ":-)", undefined]
+
+
+console.log(emrioutils.isPlainObject(my_obj)) // Returns true
+
+console.log(emrioutils.isPlainObject(my_arr)) // Returns false
+
+console.log(emrioutils.isPlainObject(null)) // Returns false
+
+console.log(emrioutils.isPlainObject("hello!")) // Returns false
+```

@@ -2,6 +2,8 @@
 
 > These are some values used by emrioutils
 
+
+
 ## `STOP`
 
 You may use this in the `forEach()` method from the [Grid Object](grid.md) to stop the execution of the method.

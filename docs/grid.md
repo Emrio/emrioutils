@@ -5,15 +5,21 @@ From 1d to 10d!
 
 Instanciate a new grid object
 
-```js
-var grid = new emrioutils.Grid()
-```
-
-You may also want to directly specify a dimension
+Syntax:
 
 ```js
-var grid = new emrioutils.Grid(3) // Will create a 3d grid
+var grid = new emrioutils.Grid(options)
 ```
+
+You can specify the dimensions of the grid directly
+
+```js
+var grid = new emrioutils.Grid({ dimensions: [5, 4, 4] })
+
+var grid = new emrioutils.Grid([5, 4, 4])
+```
+
+These two methods would give the same result. Using an object is allowed for future options.
 
 ## Attributes
 
@@ -119,6 +125,28 @@ var coords = [2, 2, 1]
 console.log(grid.get(coords)) // Returns null
 ```
 
+### `grid.inRangeCoords(coords)`
+
+Returns `true` or `false` whenever or not the given coordinates can target a case in the grid.
+
+**Note:**
+The coordinates start at 0 when grid dimensions start at 1!
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([3, 4, 6])
+
+console.log(grid.inRangeCoords([2, 1, 3])) // Returns true
+
+console.log(grid.inRangeCoords([3, 1, 3])) // Returns false
+
+console.log(grid.inRangeCoords([2, 1, -2])) // Returns false
+```
+
+**Important:**
+`inRangeCoords()` is different than the static method `correctCoords()` : the first one checks if the given coords are *in the range* of a grid and the second if the given coords are valid
+
 ### `grid.forEach(function)`
 
 This method allows you to executes a function at every cases of a grid.
@@ -156,3 +184,18 @@ grid.forEach((value, coords) => {
 ### `Grid.generate(dimensions)`
 
 A static method which generate a multi dimensional array based on the given dimensions. `grid.gen()` calls this method to generate the grid
+
+### `Grid.correctCoords(coords)`
+
+Checks if the given coordinates may be used as coordinates in a grid. This means that:
+* The given coordinates are in the form of an array
+* The items hold by the array are positive integers
+* The array has between 1 and 10 items (1d to 10d)
+
+Example:
+
+```js
+console.log(emrioutils.Grid.correctCoords(["hi", Infinity, Math.PI])) // returns false
+
+console.log(emrioutils.Grid.correctCoords([2, 5, 1, 4])) // returns true
+```
