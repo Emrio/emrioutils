@@ -1,7 +1,7 @@
 /**
  * @file   Some objects and functions
  * @author Emrio || TheEmrio
- * @version 1.1.0
+ * @version 1.1.1
  * @see {@link https://github.com/TheEmrio/emrioutils/tree/master/docs Emrioutils Docs}
  */
 
