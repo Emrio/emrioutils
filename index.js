@@ -16,3 +16,4 @@ for (var key in require('./lib/constants')) module.exports[key] = require('./lib
 // Exporting functions
 module.exports.mean = require("./lib/mean")
 module.exports.equalArrays = require("./lib/equalArrays")
+module.exports.isInt = require("./lib/isInt")
