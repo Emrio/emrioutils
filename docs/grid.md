@@ -179,6 +179,30 @@ grid.forEach((value, coords) => {
 })
 ```
 
+### `grid.every(testFunction)`
+
+Much like the `Array.every()` method, this will try the `testFunction` for every cases of the grid.
+The test function can take as argument the current value, the current coordinates and the current subarray
+
+Example:
+
+```js
+grid.fill(0) // Fills the grid with 0s
+
+// A function that tests if a value is below a defined threshold
+var isBelowThreshold = (value) => {
+  let threshold = 10
+  return value < threshold
+}
+
+console.log(grid.every(isNaN)) // Outputs false because no case is not a number
+console.log(grid.every(isBelowThreshold)) // Outputs true because no case is over 10
+
+grid.set([0, 0, 0], 12) // Sets a case's value to 12
+
+console.log(grid.every(isBelowThreshold)) // Outputs false because one case doesn't fulfil the requirement of being below 10
+```
+
 ## Static Methods
 
 ### `Grid.generate(dimensions)`
