@@ -15,8 +15,8 @@ Documentation is available [here][docs-url]
 + Added `insInt()` function
 + Added `isPlainObject()` function
 + In `Grid` Object
- + Added `correctCoords()`
- + Added `inRangeCoords()`
+    + Added `correctCoords()`
+    + Added `inRangeCoords()`
 
 ### Changes
 + Errors now use `Error` class
@@ -31,26 +31,26 @@ Documentation is available [here][docs-url]
 
 ### New
 + Added `Grid` Object
- + Added `generate()`
- + Added `gen()`
- + Added `set()`
- + Added `get()`
- + Added `forEach()`
- + Added `fill()`
- + Added `array`, `dimension`, `size`
+    + Added `generate()`
+    + Added `gen()`
+    + Added `set()`
+    + Added `get()`
+    + Added `forEach()`
+    + Added `fill()`
+    + Added `array`, `dimension`, `size`
 + Added `Stopwatch` Object
- + Added `start()`
- + Added `stop()`
- + Added `elapsed()`
- + Added `clearHistory()`
- + Added `tour()`
- + Added `historySum()`
- + Added `history`
+    + Added `start()`
+    + Added `stop()`
+    + Added `elapsed()`
+    + Added `clearHistory()`
+    + Added `tour()`
+    + Added `historySum()`
+    + Added `history`
 + Added `ModInterval` Object
- + Added `start()`
- + Added `clear()`
- + Added `reload()`
- + Added `setTickspeed()`, `setFunction()` and `setAll()`
+    + Added `start()`
+    + Added `clear()`
+    + Added `reload()`
+    + Added `setTickspeed()`, `setFunction()` and `setAll()`
 + Added `AkwardArrays` Object (not in use)
 + Added `mean()` function
 + Added `equalArrays()` function
