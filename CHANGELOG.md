@@ -24,6 +24,9 @@ Documentation is available [here][docs-url]
 ### Bug fixes
 + Fixed a bug where `Grid.generate()` would generate passed-by-reference sub-arrays
 
+### Remove
++ Removed `AkwardArray` Object (not in use)
+
 
 
 
@@ -51,7 +54,7 @@ Documentation is available [here][docs-url]
     + Added `clear()`
     + Added `reload()`
     + Added `setTickspeed()`, `setFunction()` and `setAll()`
-+ Added `AkwardArrays` Object (not in use)
++ Added `AkwardArray` Object (not in use)
 + Added `mean()` function
 + Added `equalArrays()` function
 
