@@ -50,7 +50,9 @@ Example:
 console.log(grid.dimension) // Will return 3
 ```
 
-### `grid.array`
+### _`grid.array`_
+
+**Important:** This attribute no more exists from version 2.0.0 and is replaced by `grid.toArray()`
 
 * Returns the grid in the form of an array
 * Is read-only
@@ -106,8 +108,8 @@ var coords = [2, 2, 1]
 grid.set(coords, null)
 ```
 
-**Important:**
-`Grid` doesn't support arrays yet. You may not set the value of a case to an array or the grid will go crazy. This will be fixed in future versions
+**Note:**
+`Grid` accepts arrays from version 2.0.0
 
 ### `grid.get(coords)`
 
@@ -147,10 +149,10 @@ console.log(grid.inRangeCoords([2, 1, -2])) // Returns false
 **Important:**
 `inRangeCoords()` is different than the static method `correctCoords()` : the first one checks if the given coords are *in the range* of a grid and the second if the given coords are valid
 
-### `grid.forEach(function)`
+### `grid.forEach(function callback(value, coords, array))`
 
 This method allows you to executes a function at every cases of a grid.
-It is similar to the `array.forEach()` method.
+It is similar to the `Array.forEach()` method.
 The callback will take three parameters : the value of the current case, the coordinates of that case and the current sub array.
 
 You can also stop the `forEach` method by returning the value `emrioutils.STOP`
@@ -179,7 +181,7 @@ grid.forEach((value, coords) => {
 })
 ```
 
-### `grid.every(testFunction)`
+### `grid.every(function callback(value, coords, array))`
 
 Much like the `Array.every()` method, this will try the `testFunction` for every cases of the grid.
 The test function can take as argument the current value, the current coordinates and the current subarray
@@ -202,6 +204,150 @@ grid.set([0, 0, 0], 12) // Sets a case's value to 12
 
 console.log(grid.every(isBelowThreshold)) // Outputs false because one case doesn't fulfil the requirement of being below 10
 ```
+
+### `grid.some(function callback(value, coords, array))`
+
+Checks if at least one case passes a given test
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([5, 10])
+
+grid.fill(0) // Filling the grid with 0s
+console.log(grid.some(isNaN)) // Returns false : every cases are numbers
+
+grid.set([2, 4], "hello!") // Filling one case with "hello!"
+console.log(grid.some(isNaN)) // Returns true : at least one case is not a number
+```
+
+### `grid.slice()`
+
+Returns a clone of the grid
+
+**Note:**
+Much like `Array.slice()`, this method won't pass by value objects and arrays
+
+### `grid.find(function test(value, coords, array))`
+
+Finds and returns the value of the first element that matches the given test function or undefined if no element satisfies the test
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([8, 7])
+
+// Fills the grid with values from 1 to 10
+grid.forEach((_, coords) => {
+  grid.set(coords, Math.floor(Math.random()*10)+1)
+})
+
+console.log(grid.find(x => x > 5)) // Will output true or false depending on whenever or not the grid has a case with a value > 5
+```
+
+### `grid.findCoords(function test(value, coords, array))`
+
+Finds and returns the coordinates of the first element that matches the given test function or -1 if no element satisfies the test
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([8, 7])
+
+// Fills the grid with values from 1 to 10
+grid.forEach((_, coords) => {
+  grid.set(coords, Math.floor(Math.random()*10)+1)
+})
+
+console.log(grid.findCoords(x => x < 5)) // Will return the coordinates of the first case that have its value < 5 or -1 if none is found
+```
+
+### `grid.includes(value)`
+
+Tests if the grid has a given value
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([2, 2])
+
+grid.fill(0)
+console.log(grid.includes("hello")) // Returns false
+
+grid.set([1, 0], "hello")
+console.log(grid.includes("hello")) // Returns true
+```
+
+### `grid.coordsOf(value)`
+
+Returns the coordinates of the first case to hold a given value or -1 if none found
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([2, 2])
+
+grid.fill(0)
+console.log(grid.includes("hello")) // Returns -1
+
+grid.set([1, 0], "hello")
+console.log(grid.includes("hello")) // Returns the array [1, 0]
+```
+
+### `grid.map(function callback(value, coords, array))`
+
+Creates a new grid with the result provided by a function
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([2, 2])
+
+grid.fill(1) // Fills the grid with 1s
+grid.fill(2, 0.5) // Fills half of the grid with 2s
+
+var doubled = grid.map(x => x * 2) // This grid has doubled values
+```
+
+### `grid.join(<separator>)`
+
+Returns a string of the values of all cases separated with a string or by `,`
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([2, 2])
+
+grid.fill(1) // Fills the grid with 1s
+grid.set([0, 1], 2)
+
+console.log(grid.join())    // 1,2,1,1
+console.log(grid.join("-")) // 1-2-1-1
+console.log(grid.join(""))  // 1211
+```
+
+### `grid.flat()`
+
+Returns an array that contains every values of the grid. This could be called "n-dimension to 1d"
+
+Example:
+
+```js
+var array = grid.flat() // A 1d array with the values of the grid
+```
+
+### `grid.toArray()`
+
+Returns the grid in the form of a multi-dimensional array
+
+Example:
+
+```js
+var grid = new emrioutils.Grid([2, 4])
+
+console.log(grid.toArray()) // Returns a multi-dim array
+```
+
 
 ## Static Methods
 
