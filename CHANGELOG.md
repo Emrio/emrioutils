@@ -3,11 +3,45 @@
 > Log the changes through the versions<br>
 Documentation is available [here][docs-url]
 
+
+
+## **2.0.0**
+
+### Bug fixes
++ Fixed a bug where `Grid.correctCoords()` would return `false` for coordinates having 0s
+
+### Changes
++ `Grid.generate()` now fills grid with `undefined` instead of empty values
++ Errors can now output more info about what's going wrong
++ `Grid` Object now accepts arrays
+
+### New
++ In `Grid` Object
+    + Added `toArray()`
+    + Added `every()`
+    + Added `some()`
+    + Added `slice()`
+    + Added `find()`
+    + Added `findCoords()`
+    + Added `flat()`
+    + Added `includes()`
+    + Added `coordsOf()`
+    + Added `map()`
+    + Added `join()`
+
+### Removed
++ In `Grid` Object
+    + Removed `array` property
+
+
+
 ## **1.1.1**
 
 ### Bug fixes
 + Fixed a bug where `Grid.correctCoords()` wouldn't block negative values
 + Fixed a bug where `Grid.constructor()` wouldn't allow directly inputing the dimensions array (even if code to do so was present)
+
+
 
 ## **1.1.0**
 
@@ -24,9 +58,8 @@ Documentation is available [here][docs-url]
 ### Bug fixes
 + Fixed a bug where `Grid.generate()` would generate passed-by-reference sub-arrays
 
-### Remove
+### Removed
 + Removed `AkwardArray` Object (not in use)
-
 
 
 
