@@ -4,7 +4,7 @@
 
 ### `equalArrays(array1, array2)`
 
-This allows you to check if two arrays are stricly equal in terms of length and values
+This allows you to check if two arrays are strictly equal in terms of length and values
 
 Example:
 
