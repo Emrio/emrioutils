@@ -4,6 +4,10 @@
 Documentation is available [here][docs-url]
 
 
+## **2.1.0**
+
+### New
++ Added `round` function
 
 ## **2.0.0**
 
