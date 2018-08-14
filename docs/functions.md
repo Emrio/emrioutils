@@ -66,3 +66,18 @@ console.log(emrioutils.isPlainObject(null)) // Returns false
 
 console.log(emrioutils.isPlainObject("hello!")) // Returns false
 ```
+
+
+### `round(number, precision)`
+
+Rounds a number to a given number of decimals. If no precision if provided, the result would be the same as `Math.round(number)`
+
+Example:
+
+```js
+console.log(emrioutils.round(Math.PI)) // Returns 3
+
+console.log(emrioutils.round(Math.PI, 2)) // Returns 3.14
+
+console.log(emrioutils.round(Math.PI, 5)) // Returns 3.14159
+```
