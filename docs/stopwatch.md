@@ -2,6 +2,8 @@
 
 > A simple stopwatch to watch time passing...
 
+[Back to menu](README.md)
+
 **Note:** Everything is measured in milliseconds!
 
 Instanciate a new stopwatch
