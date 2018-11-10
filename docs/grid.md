@@ -3,6 +3,8 @@
 > Create easy-to-use multi dimensional arrays
 From 1d to 10d!
 
+[Back to menu](README.md)
+
 Instanciate a new grid object
 
 Syntax:

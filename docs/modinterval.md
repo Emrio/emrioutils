@@ -3,6 +3,8 @@
 > A brother of `setInterval()`<br>
 Allows you to change (almost) everything on the go!
 
+[Back to menu](README.md)
+
 Instanciate a new ModInterval object
 
 ```js

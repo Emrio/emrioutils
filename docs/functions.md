@@ -2,6 +2,8 @@
 
 > A exhaustive list of the functions implemented by emrioutils
 
+[Back to menu](README.md)
+
 ### `equalArrays(array1, array2)`
 
 This allows you to check if two arrays are strictly equal in terms of length and values
