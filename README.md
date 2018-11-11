@@ -31,7 +31,7 @@ Feel free to post some suggestions in the [Issues Page][issues-url]
 
 
 [npm-package-url]: https://www.npmjs.com/package/emrioutils
-[docs-url]: https://github.com/TheEmrio/emrioutils/blob/master/docs/README.md
+[docs-url]: //emrio.fr/projects/emrioutils/docs
 [license-url]: https://raw.githubusercontent.com/TheEmrio/emrioutils/master/LICENSE
 [site-url]: https://emrio.fr/emrioutils
 [twitter-url]: https://twitter.com/TheEmrio
