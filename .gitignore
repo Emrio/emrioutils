@@ -1,6 +1,4 @@
 .DS_Store
 .TODO
-tester.js
-.git/
-.gitattributes
-others/
+others
+node_modules

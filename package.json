@@ -1,21 +1,29 @@
 {
   "name": "emrioutils",
-  "version": "2.1.0",
+  "version": "3.0.0",
   "description": "A utility package for my projects",
-  "main": "index.js",
+  "main": "build/index.js",
+  "types": "build/index.d.ts",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1",
-    "version": "node test/version.js"
+    "build": "tsc",
+    "test": "mocha tests/index.js"
   },
   "keywords": [
     "utility",
     "emrio"
   ],
-  "author": "Emrio (https://emrio.fr)",
+  "author": "Emrio <emrio@emrio.fr> (https://emrio.fr)",
   "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/TheEmrio/emrioutils.git"
   },
-  "dependencies": {}
+  "dependencies": {
+    "debug": "^4.1.1",
+    "moment": "^2.24.0"
+  },
+  "devDependencies": {
+    "@types/debug": "^4.1.5",
+    "mocha": "^7.0.0"
+  }
 }
