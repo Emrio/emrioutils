@@ -1,8 +1,30 @@
-# Changelog
+# CHANGELOG
 
-> Log the changes through the versions<br>
-Documentation is available [here][docs-url]
+## **3.0.0**
 
+- Added `u.arr.last()`
+- Added `u.debug()`
+- Added `u.fs.access()`
+- Added `u.fs.appendFile()`
+- Added `u.fs.fileExists()`
+- Added `u.fs.readdir()`
+- Added `u.fs.readFile()`
+- Added `u.fs.unlink()`
+- Added `u.fs.voidDir()`
+- Added `u.math.avg()` (replaces `mean()`)
+- Added `u.math.round()` (replaces `round()`)
+- Added `u.obj.ExtensibleFunction`
+- Added `u.obj.makeShallowCopy()`
+- Added `u.obj.resolveObjectProperty()`
+- Added `u.rnd.randfloat()`
+- Added `u.rnd.randhex()`
+- Added `u.rnd.randint()`
+- Added `u.str.replaceText()`
+- Added `u.str.splice()`
+- Added `u.time.hr2ms()`
+- Added `u.time.sleep()`
+- Removed v2 classes
+- Removed v2 functions
 
 ## **2.1.0**
 
