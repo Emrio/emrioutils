@@ -1,6 +1,6 @@
 /* global describe it */
 const assert = require('assert')
-const u = require('.')
+const u = require('..')
 
 describe('arr', () => {
   describe('#last()', () => {
