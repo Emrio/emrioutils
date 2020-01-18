@@ -37,7 +37,7 @@ function createDebugger (p: string, level: LogLevel): debug.Debugger {
   return log
 }
 
-class Debugger extends ExtensibleFunction {
+export class Debugger extends ExtensibleFunction {
   public error: debug.Debugger
   public warn: debug.Debugger
   constructor (p: string) {
@@ -50,8 +50,6 @@ class Debugger extends ExtensibleFunction {
 /**
  * debug - Creates a custom debugger class instance
  */
-function debug (...debugIdentifiers: string[]): Debugger {
+export function debug (...debugIdentifiers: string[]): Debugger {
   return new Debugger((process.env.EMRIOUTILS_LOG_PREFIX ? (process.env.EMRIOUTILS_LOG_PREFIX + ':') : '') + debugIdentifiers.join('/'))
 }
-
-export default debug
