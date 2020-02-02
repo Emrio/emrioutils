@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## **3.0.2**
+
+- Using `Object.prototype.hasOwnProperty` instead of `<obj>.hasOwnProperty`
+
+## **3.0.1**
+
+- Code formatting
+
 ## **3.0.0**
 
 - Added `u.arr.last()`
