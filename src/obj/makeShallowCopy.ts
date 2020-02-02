@@ -6,8 +6,8 @@
  * @param  {Object}  from       Input object
  * @param  {Boolean} [replace]  Replace properties if they are already defined
  */
-export function makeShallowCopy (target: any, from: any, replace: boolean = false) {
+export function makeShallowCopy (target: any, from: any, replace: boolean = false): void {
   for (const prop in from) {
-    if (replace || !target.hasOwnProperty(prop)) target[prop] = from[prop]
+    if (replace || !Object.prototype.hasOwnProperty.call(target, prop)) target[prop] = from[prop]
   }
 }

@@ -8,6 +8,6 @@
  */
 export function resolveObjectProperty (object: any, path: string[] | string): any {
   if (typeof path === 'string') return resolveObjectProperty(object, path.split('.'))
-  if (!object.hasOwnProperty(path[0])) object[path[0]] = {}
+  if (!Object.prototype.hasOwnProperty.call(object, path[0])) object[path[0]] = {}
   return path.length === 1 ? object[path[0]] : resolveObjectProperty(object[path[0]], path.slice(1))
 }
