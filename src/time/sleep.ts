@@ -1,4 +1,3 @@
-
 /**
  * sleep - Resolves a promise after a given period of time
  */

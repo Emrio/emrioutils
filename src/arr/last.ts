@@ -1,5 +1,5 @@
 /**
- * last - Returns the last element of an array.
+ * Returns the last element of an array.
  * Optionally accepts an offset
  */
 export function last <T> (arr: T[], offset: number = 0): T {

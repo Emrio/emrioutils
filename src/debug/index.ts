@@ -37,6 +37,9 @@ function createDebugger (p: string, level: LogLevel): debug.Debugger {
   return log
 }
 
+/**
+ * Creates a debugger instance
+ */
 export class Debugger extends ExtensibleFunction {
   public error: debug.Debugger
   public warn: debug.Debugger
