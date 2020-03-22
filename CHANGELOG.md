@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.1.0**
+
+- **BREAKING:** Removed `Debugger.warn`
+
 ## **3.0.2**
 
 - Using `Object.prototype.hasOwnProperty` instead of `<obj>.hasOwnProperty`
