@@ -41,12 +41,10 @@ function createDebugger (p: string, level: LogLevel): debug.Debugger {
  * Creates a debugger instance
  */
 export class Debugger extends ExtensibleFunction {
-  public error: debug.Debugger
-  public warn: debug.Debugger
-  constructor (p: string) {
-    super(createDebugger(p, 'log'))
-    this.error = createDebugger(p, 'error')
-    this.warn = createDebugger(p, 'warn')
+  public error: debug.Debugger // Prints data as error
+  constructor (debuggerIdentifier: string) {
+    super(createDebugger(debuggerIdentifier, 'log'))
+    this.error = createDebugger(debuggerIdentifier, 'error')
   }
 }
 

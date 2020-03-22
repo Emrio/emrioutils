@@ -21,14 +21,6 @@ describe('debug', () => {
   it('should be a function', () => {
     assert(debug instanceof Function)
   })
-  describe('#warn', () => {
-    it('should have error and warn functions', () => {
-      assert(debug.warn instanceof Function)
-    })
-    it('should use same namespace', () => {
-      assert.strictEqual(debug.namespace, debug.warn.namespace)
-    })
-  })
   describe('#error', () => {
     it('should have error and warn functions', () => {
       assert(debug.error instanceof Function)
