@@ -111,6 +111,21 @@ describe('rnd', () => {
 })
 
 describe('str', () => {
+  describe('#capitalizeFirstLetter()', () => {
+    it('should capitalize a latin character', () => {
+      assert.strictEqual(u.str.capitalizeFirstLetter('hello'), 'Hello')
+    })
+    it('should capitalize accentuated characters', () => {
+      assert.strictEqual(u.str.capitalizeFirstLetter('éléphant'), 'Éléphant')
+    })
+    it('should leave empty strings', () => {
+      assert.strictEqual(u.str.capitalizeFirstLetter(''), '')
+      assert.strictEqual(u.str.capitalizeFirstLetter('  '), '  ')
+    })
+    it('should not do anything if already capitalized', () => {
+      assert.strictEqual(u.str.capitalizeFirstLetter('Hello'), 'Hello')
+    })
+  })
   describe('#replaceText()', () => {
     it('should replace first occurences', () => {
       assert.strictEqual(u.str.replaceText('hello {var1} {var2} {varxxx} {yo}', { var1: 'world', var2: 'how are', varxxx: 'you?' }), 'hello world how are you? {yo}')

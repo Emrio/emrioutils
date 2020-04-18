@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.1.1**
+
+- Added `u.str.capitalizeFirstLetter()`
+
 ## **3.1.0**
 
 - **BREAKING:** Removed `Debugger.warn`
