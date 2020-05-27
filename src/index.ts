@@ -7,5 +7,5 @@ import * as rnd from './rnd'
 import * as str from './str'
 import * as time from './time'
 
-const u = { arr, debug, Debugger, fs, math, obj, rnd, str, time }
-export default u
+export { arr, debug, Debugger, fs, math, obj, rnd, str, time }
+export default { arr, debug, Debugger, fs, math, obj, rnd, str, time }
