@@ -1,5 +1,5 @@
+import { capitalizeFirstLetter } from './capitalizeFirstLetter'
 import { replaceText } from './replaceText'
 import { splice } from './splice'
-import { capitalizeFirstLetter } from './capitalizeFirstLetter'
 
-export { replaceText, splice, capitalizeFirstLetter }
+export { capitalizeFirstLetter, replaceText, splice }
