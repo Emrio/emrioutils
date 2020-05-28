@@ -1,3 +1,4 @@
+import { flatten } from './flatten'
 import { last } from './last'
 
-export { last }
+export { flatten, last }
