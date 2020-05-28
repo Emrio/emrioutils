@@ -1,5 +1,15 @@
 # CHANGELOG
 
+## **3.1.2**
+
+- Added `u.arr.flatten()`
+- Added `u.time.ddmmyyyy()`
+- Added `u.time.ddmmyyyyhhmm()`
+- Added `u.time.ddmmyyyyhhmmss()`
+
+- Removed `moment` from dependencies
+- ES6 syntax `import u from 'emrioutils'` is now supported. `import u = require('emrioutils')` is still available
+
 ## **3.1.1**
 
 - Added `u.str.capitalizeFirstLetter()`
