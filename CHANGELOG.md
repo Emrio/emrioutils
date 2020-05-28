@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## **3.1.2**
+## **3.1.3**
 
 - Added `u.arr.flatten()`
 - Added `u.time.ddmmyyyy()`
@@ -9,6 +9,10 @@
 
 - Removed `moment` from dependencies
 - ES6 syntax `import u from 'emrioutils'` is now supported. `import u = require('emrioutils')` is still available
+
+## **3.1.2**
+
+- Security fix and code cleanup
 
 ## **3.1.1**
 
