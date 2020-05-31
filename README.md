@@ -73,6 +73,10 @@ debug.error("Houston, we've got an error!")
 - `avg(arr)`: returns the average value in an array of numbers
 - `round(x, n)`: rounds a number to the n-th decimal place
 
+### `misc`
+
+- **\*** `fitFileSize(size, customUnits?)`: returns the best filesize unit and the given value in that unit (rounded to 2 decimal places)
+
 ### `obj`
 
 - `ExtensibleFunction`: A class for making callable objects

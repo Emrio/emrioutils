@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.1.4**
+
+- Added `u.misc.fitFileSize()`
+
 ## **3.1.3**
 
 - Added `u.arr.flatten()`
