@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.1.5**
+
+- Internal code update
+
 ## **3.1.4**
 
 - Added `u.misc.fitFileSize()`
