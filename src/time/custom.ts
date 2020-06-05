@@ -2,7 +2,7 @@
  * ddmmyyyy - Returns a custom string that represent the given date
  */
 export function ddmmyyyy (separation: string = '-', date: Date = new Date()) {
-  return date.getDate() + separation + (date.getMonth() + 1).toString().padStart(2, '0') + separation + date.getFullYear()
+  return date.getDate().toString().padStart(2, '0') + separation + (date.getMonth() + 1).toString().padStart(2, '0') + separation + date.getFullYear()
 }
 
 /**
