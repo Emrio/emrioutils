@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.1.6**
+
+- Fixed custom dates
+
 ## **3.1.5**
 
 - Internal code update
