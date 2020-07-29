@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.1.7**
+- Fixed `u.obj.resolveObjectProperty` which created properties when they did not exist
+
 ## **3.1.6**
 
 - Fixed custom dates
