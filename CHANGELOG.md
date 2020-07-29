@@ -1,7 +1,17 @@
 # CHANGELOG
 
-## **3.1.7**
+## **3.1.10**
 - Fixed `u.obj.resolveObjectProperty` which created properties when they did not exist
+
+## **3.1.9**
+- Added `u.fs.stat`
+
+## **3.1.8**
+- Fixed new `u.fs` functions
+
+## **3.1.7**
+- Added `u.fs.mkdir`
+- Added `u.fs.writeFile`
 
 ## **3.1.6**
 
