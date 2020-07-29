@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.1.11**
+- `u.fs.resolveObjectProperty` can now ensure a property exists (defined old undefined behaviour)
+
 ## **3.1.10**
 - Fixed `u.obj.resolveObjectProperty` which created properties when they did not exist
 
