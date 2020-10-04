@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.1.12**
+- Added `u.str.split`
+
 ## **3.1.11**
 - `u.fs.resolveObjectProperty` can now ensure a property exists (defined old undefined behaviour)
 
