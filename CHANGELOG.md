@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.3.0**
+- Added bases to `u.str`
+
 ## **3.2.1**
 - Fixed exports
 
