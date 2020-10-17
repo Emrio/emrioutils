@@ -8,5 +8,6 @@ import * as rnd from './rnd'
 import * as str from './str'
 import * as time from './time'
 
-export { arr, debug, Debugger, fs, math, misc, obj, rnd, str, time }
-export default { arr, debug, Debugger, fs, math, misc, obj, rnd, str, time }
+const u = { arr, debug, Debugger, fs, math, misc, obj, rnd, str, time }
+export const ularge = { ...u, ...arr, ...fs, ...math, ...misc, ...obj, ...rnd, ...str, ...time }
+export default ularge
