@@ -1,5 +1,13 @@
 # CHANGELOG
 
+## **3.2.0**
+- Added `u.rnd.rand`
+- Added `u.rnd.randstring`
+- Updated `u.rnd.randint`: it can now take a unique parameter, the upper bound (0 being the lower one)
+- Updated descriptions for `u.rnd.randhex` and `u.rnd.randint`
+- Added `u.str.cfl` as a shortcut for `u.str.capitalizeFirstLetter`
+- Exposing all methods on root object level for shortcuts
+
 ## **3.1.12**
 - Added `u.str.split`
 
