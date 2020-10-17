@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.2.1**
+- Fixed exports
+
 ## **3.2.0**
 - Added `u.rnd.rand`
 - Added `u.rnd.randstring`
