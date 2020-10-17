@@ -9,5 +9,6 @@ import * as str from './str'
 import * as time from './time'
 
 const u = { arr, debug, Debugger, fs, math, misc, obj, rnd, str, time }
-export const ularge = { ...u, ...arr, ...fs, ...math, ...misc, ...obj, ...rnd, ...str, ...time }
+const ularge = { ...u, ...arr, ...fs, ...math, ...misc, ...obj, ...rnd, ...str, ...time }
+module.exports = ularge
 export default ularge
