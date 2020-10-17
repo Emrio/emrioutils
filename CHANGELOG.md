@@ -1,6 +1,9 @@
 # CHANGELOG
 
-## **3.3.0**
+## **3.2.3**
+- Added `u.str.base60`
+
+## **3.2.2**
 - Added bases to `u.str`
 
 ## **3.2.1**
