@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.2.4**
+- Internal changes, better code
+
 ## **3.2.3**
 - Added `u.str.base60`
 
