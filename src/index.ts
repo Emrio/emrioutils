@@ -25,3 +25,5 @@ export const obj = _obj
 export const rnd = _rnd
 export const str = _str
 export const time = _time
+
+exports.default = { arr, ...arr, fs, ...fs, math, ...math, misc, ...misc, obj, ...obj, rnd, ...rnd, str, ...str, time, ...time }
