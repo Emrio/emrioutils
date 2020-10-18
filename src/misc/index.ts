@@ -1,3 +1,1 @@
-import { fitFileSize } from './fitFileSize'
-
-export { fitFileSize }
+export * from './fitFileSize'

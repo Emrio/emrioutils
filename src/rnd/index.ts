@@ -1,7 +1,5 @@
-import { rand } from './rand'
-import { randfloat } from './randfloat'
-import { randhex } from './randhex'
-import { randint } from './randint'
-import { randstring } from './randstring'
-
-export { rand, randfloat, randhex, randint, randstring }
+export * from './rand'
+export * from './randfloat'
+export * from './randhex'
+export * from './randint'
+export * from './randstring'

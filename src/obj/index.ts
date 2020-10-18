@@ -1,5 +1,3 @@
-import { ExtensibleFunction } from './ExtensibleFunction'
-import { makeShallowCopy } from './makeShallowCopy'
-import { resolveObjectProperty } from './resolveObjectProperty'
-
-export { ExtensibleFunction, makeShallowCopy, resolveObjectProperty }
+export * from './ExtensibleFunction'
+export * from './makeShallowCopy'
+export * from './resolveObjectProperty'

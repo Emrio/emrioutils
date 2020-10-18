@@ -1,14 +1,9 @@
-import * as arr from './arr'
-import { debug, Debugger } from './debug'
-import * as fs from './fs'
-import * as math from './math'
-import * as misc from './misc'
-import * as obj from './obj'
-import * as rnd from './rnd'
-import * as str from './str'
-import * as time from './time'
-
-const u = { arr, debug, Debugger, fs, math, misc, obj, rnd, str, time }
-const ularge = { ...u, ...arr, ...fs, ...math, ...misc, ...obj, ...rnd, ...str, ...time }
-module.exports = ularge
-export default ularge
+export * from './arr'
+export * from './debug'
+export * from './fs'
+export * from './math'
+export * from './misc'
+export * from './obj'
+export * from './rnd'
+export * from './str'
+export * from './time'
