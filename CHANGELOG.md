@@ -1,5 +1,11 @@
 # CHANGELOG
 
+## **3.2.6**
+- Fixes
+
+## **3.2.5**
+- Fixes
+
 ## **3.2.4**
 - Internal changes, better code
 
