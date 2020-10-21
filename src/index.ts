@@ -9,7 +9,7 @@ export * from './str'
 export * from './time'
 
 import * as _arr from './arr'
-import { debug as _debug, Debugger as _Debugger } from './debug'
+import { debug, Debugger } from './debug'
 import * as _fs from './fs'
 import * as _math from './math'
 import * as _misc from './misc'
@@ -19,8 +19,6 @@ import * as _str from './str'
 import * as _time from './time'
 
 export const arr = _arr
-export const debug = _debug
-export const Debugger = _Debugger
 export const fs = _fs
 export const math = _math
 export const misc = _misc
