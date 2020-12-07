@@ -1,11 +1,9 @@
 # emrioutils [![npm version][version-img]][npm-package-url] [![license][license-img]][license-url]
 
-> A promise-based utility package for my projects
-
-[Twitter][twitter-url] |
 [Site][site-url] |
 [Changelog][changelog-url] |
-[Github][github-url]
+[Github][github-url] |
+[NPM][npm-package-url]
 
 ## Installing
 
@@ -46,16 +44,16 @@ import u = require('emrioutils')
 
 Creates a debugger instance
 
-Set the `EMRIOUTILS_LOG_PREFIX` environment variable to set a prefix for all of the instances
+Set the `EMRIOUTILS_LOG_PREFIX` environment variable to give a prefix to all Debugger instances.
 
-Set the `EMRIOUTILS_LOG_PATH` env var to a valid folder in your system in order to dump lines to a file (one for each day)
+Set `EMRIOUTILS_LOG_PATH` to a valid folder in your system in order to dump logs to files.
 
 Usage example:
 
 ```ts
 const debug = u.debug('process', 'sub-process', 'sub-sub-process')
 debug('Hello, world!')
-debug.error("Houston, we've got an error!")
+debug.error("Houston, we have a problem!")
 ```
 
 ### `fs`
@@ -106,15 +104,14 @@ debug.error("Houston, we've got an error!")
 
 ## Notes
 
-This project is intended for my personal use only.
-Future version may include breaking changes if it fits my needs but feel free to use or fork the project.
+This project is intended for a personal use only.
+Future versions may include breaking changes if they fit my needs. Nonetheless feel free to use or fork the project.
 
 Feel free to post some suggestions and/or questions in the [Issues Page][issues-url]
 
 [npm-package-url]: https://www.npmjs.com/package/emrioutils
 [license-url]: https://raw.githubusercontent.com/TheEmrio/emrioutils/master/LICENSE
 [site-url]: https://emrio.fr/
-[twitter-url]: https://twitter.com/TheEmrio
 [github-url]: https://github.com/TheEmrio/emrioutils
 [changelog-url]: https://github.com/TheEmrio/emrioutils/blob/master/CHANGELOG.md
 [issues-url]: https://github.com/TheEmrio/emrioutils/issues/
