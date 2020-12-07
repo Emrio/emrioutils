@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.2.7**
+- Smaller build size
+
 ## **3.2.6**
 - Fixes
 
