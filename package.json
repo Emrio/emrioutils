@@ -1,6 +1,6 @@
 {
   "name": "emrioutils",
-  "version": "3.2.7",
+  "version": "3.2.8",
   "description": "A utility package for my projects",
   "main": "build/index.js",
   "types": "build/index.d.ts",
