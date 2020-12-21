@@ -1,6 +1,6 @@
 # CHANGELOG
 
-## **3.3.0**
+## **3.2.10**
 - Added `u.arr.partition`
 
 ## **3.2.9**
