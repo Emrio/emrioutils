@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.2.9**
+- Added support for numbers and booleans in `u.str.replaceText()` 
+
 ## **3.2.8**
 - Smaller build size
 
