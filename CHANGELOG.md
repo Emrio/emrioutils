@@ -1,7 +1,10 @@
 # CHANGELOG
 
+## **3.3.0**
+- Added `u.arr.partition`
+
 ## **3.2.9**
-- Added support for numbers and booleans in `u.str.replaceText()` 
+- Added support for numbers and booleans in `u.str.replaceText`
 
 ## **3.2.8**
 - Smaller build size
