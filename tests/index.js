@@ -42,6 +42,15 @@ describe('fs', () => {
       assert.strictEqual(await u.fs.fileExists('./yoyoyoyoyoyoyoy'), false)
     })
 
+    it('should return true is file does exist', async () => {
+      await u.fs.writeFile('./file1', 'helloworld')
+
+      assert.strictEqual(await u.fs.fileExists('./file1'), true)
+
+      await u.fs.unlink('./file1')
+    })
+  })
+
   describe('#voidDir()', async () => {
     it('should void a directory but not delete the directory itself', async () => {
       await u.fs.mkdir('./dir3')
