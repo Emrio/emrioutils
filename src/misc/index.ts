@@ -1,1 +1,1 @@
-export * from './fitFileSize'
+export * from './digitalSizes'

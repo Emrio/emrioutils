@@ -78,7 +78,12 @@ debug.error("Houston, we have a problem!")
 
 ### `misc`
 
-- **\*** `fitFileSize(size, customUnits?)`: returns the best filesize unit and the given value in that unit (rounded to 2 decimal places)
+- `fitSize(size, customUnits?)`: returns the best size unit and the given value in that unit (rounded to 2 decimal places)
+- `getSize(size, customUnits?)`: returns a string representing best a raw size value
+- `defaultSizes.enStorage`: A list of units used for file storage representation in English (from bytes to exabytes)
+- `defaultSizes.frStorage`: A list of units used for file storage representation in French (from octets to exaoctets)
+- `defaultSizes.enBandwidth`: A list of units used for bandwidth size representation in English (from bits to exabits)
+- `defaultSizes.frBandwidth`: A list of units used for bandwidth size representation in French (from bits to exabits)
 
 ### `obj`
 

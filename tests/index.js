@@ -159,6 +159,42 @@ describe('math', () => {
   })
 })
 
+describe('misc', () => {
+  describe('#fitSize()', () => {
+    it('should give a size in bytes', () => {
+      const size = u.misc.fitSize(42)
+      assert.strictEqual(size.value, 42)
+      assert.strictEqual(size.unit, 'bytes')
+    })
+
+    it('should give a size in megabytes', () => {
+      const size = u.misc.fitSize(42 * 1024 * 1024 + 100 * 1024)
+      assert.strictEqual(size.value, 42.1)
+      assert.strictEqual(size.unit, 'MB')
+    })
+
+    it('should give a size in "gigaoctets"', () => {
+      const size = u.misc.fitSize(42 * 1024 * 1024 * 1024, u.misc.defaultSizes.frStorage)
+      assert.strictEqual(size.value, 42)
+      assert.strictEqual(size.unit, 'Go')
+    })
+  })
+
+  describe('#getSize()', () => {
+    it('should give a size in bytes', () => {
+      assert.strictEqual(u.misc.getSize(42), '42 bytes')
+    })
+
+    it('should give a size in megabytes', () => {
+      assert.strictEqual(u.misc.getSize(42 * 1024 * 1024 + 100 * 1024), '42.1 MB')
+    })
+
+    it('should give a size in "gigaoctets"', () => {
+      assert.strictEqual(u.misc.getSize(42 * 1024 * 1024 * 1024, u.misc.defaultSizes.frStorage), '42 Go')
+    })
+  })
+})
+
 describe('rnd', () => {
   describe('#randfloat()', () => {
     it('should give a random positive float within range', () => {
