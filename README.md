@@ -76,6 +76,8 @@ debug.error("Houston, we have a problem!")
 - `avg(arr)`: returns the average value in an array of numbers
 - `equal(a, b, precision?)`: tests the quasi-equality between two numbers
 - `round(x, n)`: rounds a number to the n-th decimal place
+- `createLinearTransform(src1, src2, dst1, dst2)`: returns a function that transforms a number from one range to another number of another range and does so in a linear fashion
+- `createLinearTransformND(src1, src2, dst1, dst2)`: same as the first but for multidimensional vectors using arrays of numbers
 
 ### `misc`
 

@@ -157,6 +157,73 @@ describe('math', () => {
       assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3 + 0.0001), false)
     })
   })
+
+  describe('#createLinearTransform()', () => {
+    const a = u.rnd.randfloat(0, 42)
+    const b = u.rnd.randfloat(a, 84)
+    const A = u.rnd.randfloat(100, 142)
+    const B = u.rnd.randfloat(A, 1084)
+
+    const tr = u.math.createLinearTransform(a, b, A, B)
+
+    it('should return a function', () => {
+      assert(typeof tr === 'function')
+    })
+
+    it('should return limit values', () => {
+      assert(u.equal(tr(a), A))
+      assert(u.equal(tr(b), B))
+    })
+
+    it('should return values within range and increasing', () => {
+      let last = a
+
+      for (const i of u.range(500)) { /* eslint-disable-line no-unused-vars */
+        const x = u.rnd.randfloat(last, b)
+
+        assert(tr(last) <= tr(x) && tr(x) <= B)
+
+        last = x
+      }
+    })
+  })
+
+  describe('#createLinearTransformND()', () => {
+    const a = [u.randfloat(0, 42), u.randfloat(0, 42), u.randfloat(0, 42)]
+    const b = [u.randfloat(a[0], 84), u.randfloat(a[1], 84), u.randfloat(a[2], 84)]
+    const A = [u.randfloat(100, 142), u.randfloat(100, 142), u.randfloat(100, 142)]
+    const B = [u.randfloat(A[0], 1084), u.randfloat(A[1], 1084), u.randfloat(A[2], 1084)]
+
+    const tr = u.math.createLinearTransformND(a, b, A, B)
+
+    it('should return a function', () => {
+      assert(typeof tr === 'function')
+    })
+
+    it('should return limit values', () => {
+      assert(u.equal(tr(a)[0], A[0]))
+      assert(u.equal(tr(a)[1], A[1]))
+      assert(u.equal(tr(a)[2], A[2]))
+      assert(u.equal(tr(b)[0], B[0]))
+      assert(u.equal(tr(b)[1], B[1]))
+      assert(u.equal(tr(b)[2], B[2]))
+    })
+
+    it('should return values within range and increasing', () => {
+      let last = a
+
+      for (const i of u.range(500)) { /* eslint-disable-line no-unused-vars */
+        const x = [u.randfloat(last[0], b[0]), u.randfloat(last[1], b[1]), u.randfloat(last[2], b[2])]
+
+        assert(tr(last)[0] <= tr(x)[0] && (tr(x)[0] <= B[0] || u.equal(tr(x)[0], B[0])))
+        assert(tr(last)[1] <= tr(x)[1] && (tr(x)[1] <= B[1] || u.equal(tr(x)[1], B[1])))
+        assert(tr(last)[2] <= tr(x)[2] && (tr(x)[2] <= B[2] || u.equal(tr(x)[2], B[2])))
+
+        last = x
+      }
+    })
+  })
+
   describe('#round()', () => {
     it('should round to unit', () => {
       assert.strictEqual(u.math.round(123.4567), 123)
