@@ -37,7 +37,7 @@ import u = require('emrioutils')
 
 ### `arr`
 
-- **\*** `flatten(arr, depth?)`: Array.flat implementation. Flatten the curve!
+- `flatten(arr, depth?)`: Array.flat implementation. Flatten the curve!
 - `last(arr, shift?)`: Returns the length-shift element of the array
 
 ### `debug`

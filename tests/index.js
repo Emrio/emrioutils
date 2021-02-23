@@ -3,6 +3,16 @@ const assert = require('assert')
 const u = require('..')
 
 describe('arr', () => {
+  describe('#flatten()', () => {
+    it('should flatten an array', () => {
+      assert.deepStrictEqual(u.arr.flatten([1, [3, 42], 'string', [true, ['hello', 'world!']]]), [1, 3, 42, 'string', true, 'hello', 'world!'])
+    })
+
+    it('should not go to far if it is told otherwise', () => {
+      assert(typeof u.arr.flatten([1, [3, 42], 'string', [true, ['hello', 'world!']]], 1)[5] === 'object')
+    })
+  })
+
   describe('#last()', () => {
     it('should return last item', () => {
       assert.strictEqual(u.arr.last([1, 2, 3]), 3)
