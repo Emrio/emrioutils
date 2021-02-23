@@ -74,6 +74,7 @@ debug.error("Houston, we have a problem!")
 ### `math`
 
 - `avg(arr)`: returns the average value in an array of numbers
+- `equal(a, b, precision?)`: tests the quasi-equality between two numbers
 - `round(x, n)`: rounds a number to the n-th decimal place
 
 ### `misc`

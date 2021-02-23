@@ -144,6 +144,19 @@ describe('math', () => {
     })
   })
 
+  describe('#equal()', () => {
+    it('should return true when using the same number', () => {
+      assert.strictEqual(u.math.equal(42.00000001, 42.00000001), true)
+    })
+
+    it('should return true when using the same number (mathematically)', () => {
+      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3), true)
+    })
+
+    it('should return false when precision is not met', () => {
+      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3 + 0.0001), false)
+    })
+  })
   describe('#round()', () => {
     it('should round to unit', () => {
       assert.strictEqual(u.math.round(123.4567), 123)
