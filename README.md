@@ -61,10 +61,14 @@ debug.error("Houston, we have a problem!")
 - `fileExists(filepath)`: Tests if a file exists
 - `voidDir(dirpath)`: Removes all of a directory's files, the directory should not contain sub directories
 - `access`: Same as the fs method but promisified
-- `appendFile`: Same as the fs method but promisified
-- `readdir`: Same as the fs method but promisified
-- `readFile`: Same as the fs method but promisified
-- `unlink`: Same as the fs method but promisified
+- `appendFile`
+- `mkdir`
+- `readdir`
+- `readFile`
+- `rmdir`
+- `stat`
+- `unlink`
+- `writeFile`
 
 ### `math`
 
