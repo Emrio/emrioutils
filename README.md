@@ -59,6 +59,7 @@ debug.error("Houston, we have a problem!")
 ### `fs`
 
 - `fileExists(filepath)`: Tests if a file exists
+- `isDir(dirpath)`: Tests if a path exists and is a directory
 - `voidDir(dirpath)`: Removes all of a directory's files, the directory should not contain sub directories
 - `access`: Same as the fs method but promisified
 - `appendFile`

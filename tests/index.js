@@ -51,6 +51,28 @@ describe('fs', () => {
     })
   })
 
+  describe('#isDir()', () => {
+    it('should return false is file does not exist', async () => {
+      assert.strictEqual(await u.fs.isDir('./yoyoyoyoyoyoyoy'), false)
+    })
+
+    it('should return false is path is not a directory', async () => {
+      await u.fs.writeFile('./file2', 'helloworld')
+
+      assert.strictEqual(await u.fs.isDir('./file2'), false)
+
+      await u.fs.unlink('./file2')
+    })
+
+    it('should return false is file is not a directory', async () => {
+      await u.fs.mkdir('./dir2')
+
+      assert.strictEqual(await u.fs.isDir('./dir2'), true)
+
+      await u.fs.rmdir('./dir2')
+    })
+  })
+
   describe('#voidDir()', async () => {
     it('should void a directory but not delete the directory itself', async () => {
       await u.fs.mkdir('./dir3')
