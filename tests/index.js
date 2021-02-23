@@ -7,6 +7,7 @@ describe('arr', () => {
     it('should return last item', () => {
       assert.strictEqual(u.arr.last([1, 2, 3]), 3)
     })
+
     it('should return before last item', () => {
       assert.strictEqual(u.arr.last([1, 2, 3], 1), 2)
     })
@@ -39,6 +40,64 @@ describe('fs', () => {
   describe('#fileExists()', () => {
     it('should return false is file does not exist', async () => {
       assert.strictEqual(await u.fs.fileExists('./yoyoyoyoyoyoyoy'), false)
+    })
+
+  describe('#voidDir()', async () => {
+    it('should void a directory but not delete the directory itself', async () => {
+      await u.fs.mkdir('./dir3')
+      await u.fs.writeFile('./dir3/file1', 'hello world 1')
+      await u.fs.writeFile('./dir3/file2', 'hello world 2')
+
+      await u.fs.voidDir('./dir3')
+
+      assert.strictEqual(await u.fs.fileExists('./dir3/file1'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir3/file2'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir3'), true)
+
+      await u.fs.rmdir('./dir3')
+    })
+
+    it('should void a directory but not delete files in sub-directories', async () => {
+      await u.fs.mkdir('./dir4')
+      await u.fs.writeFile('./dir4/file1', 'hello world 1')
+      await u.fs.mkdir('./dir4/dir1')
+      await u.fs.writeFile('./dir4/dir1/file1', 'hello world 4-1')
+
+      await u.fs.voidDir('./dir4', false)
+
+      assert.strictEqual(await u.fs.fileExists('./dir4/file1'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir4/dir1/file1'), true)
+
+      await u.fs.rmdir('./dir4', { recursive: true })
+    })
+
+    it('should void a directory and its sub-directories but not the directory itself', async () => {
+      await u.fs.mkdir('./dir5')
+      await u.fs.writeFile('./dir5/file1', 'hello world 1')
+      await u.fs.mkdir('./dir5/dir1')
+      await u.fs.writeFile('./dir5/dir1/file1', 'hello world 5-1')
+
+      await u.fs.voidDir('./dir5', true)
+
+      assert.strictEqual(await u.fs.fileExists('./dir5/file1'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir5/dir1/file1'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir5/dir1'), true)
+
+      await u.fs.rmdir('./dir5', { recursive: true })
+    })
+
+    it('should delete everything in a directory', async () => {
+      await u.fs.mkdir('./dir6')
+      await u.fs.writeFile('./dir6/file1', 'hello world 1')
+      await u.fs.mkdir('./dir6/dir1')
+      await u.fs.writeFile('./dir6/dir1/file1', 'hello world 6-1')
+
+      await u.fs.voidDir('./dir6', true, true)
+
+      assert.strictEqual(await u.fs.fileExists('./dir6/file1'), false)
+      assert.strictEqual(await u.fs.fileExists('./dir6/dir1'), false)
+
+      await u.fs.rmdir('./dir6', { recursive: true })
     })
   })
 })
