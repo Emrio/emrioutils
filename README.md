@@ -39,6 +39,7 @@ import u = require('emrioutils')
 
 - `flatten(arr, depth?)`: Array.flat implementation. Flatten the curve!
 - `last(arr, shift?)`: Returns the length-shift element of the array
+- `nafum(n, fillerFunction)`: Shortcut for `new Array(n).fill(undefined).map(fillerFunction)`. Filler function only has an index argument.
 
 ### `debug`
 

@@ -22,6 +22,18 @@ describe('arr', () => {
       assert.strictEqual(u.arr.last([1, 2, 3], 1), 2)
     })
   })
+
+  describe('#nafum()', () => {
+    it('should create an array of given length', () => {
+      const n = u.randint(5, 100)
+
+      const arr = u.nafum(n, i => (i * 42) + 'yo')
+
+      assert(arr.every((el, i) => el === (i * 42) + 'yo'))
+
+      assert(n === arr.length)
+    })
+  })
 })
 
 describe('debug', () => {
