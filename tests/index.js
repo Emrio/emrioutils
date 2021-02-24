@@ -34,6 +34,28 @@ describe('arr', () => {
       assert(n === arr.length)
     })
   })
+
+  describe('#partition()', () => {
+    it('should partition numbers', () => {
+      const arr = u.nafum(u.randint(5, 100), () => u.randint(-100, 100))
+
+      const part = u.partition(arr, (el, i) => {
+        if (el === 0) {
+          return 'null'
+        }
+
+        return el > 0 ? 'positive' : 'negative'
+      })
+
+      assert((part.null || []).length + (part.positive || []).length + (part.negative || []).length === arr.length)
+
+      assert((part.null || []).every(el => el === 0))
+
+      assert((part.positive || []).every(el => el > 0))
+
+      assert((part.negative || []).every(el => el < 0))
+    })
+  })
 })
 
 describe('debug', () => {
