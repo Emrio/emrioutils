@@ -74,6 +74,7 @@ debug.error("Houston, we have a problem!")
 ### `generators`
 
 - `range(a, b?, c?)`: Implementation of Python's built-in `range` function. Can be used in `for...of` loops
+- `enumerate(arr)`: Implementation of Python's built-in `enumerate` function. Can be used in `for...of` loops
 
 ### `math`
 

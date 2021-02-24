@@ -202,17 +202,19 @@ describe('generators', () => {
     })
   })
 
-  describe('#equal()', () => {
-    it('should return true when using the same number', () => {
-      assert.strictEqual(u.math.equal(42.00000001, 42.00000001), true)
-    })
+  describe('#enumerate()', () => {
+    it('should return indices and array values', () => {
+      const arr = ['42', 'hello', true, -7, { a: null }]
 
-    it('should return true when using the same number (mathematically)', () => {
-      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3), true)
-    })
+      let j = 0
 
-    it('should return false when precision is not met', () => {
-      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3 + 0.0001), false)
+      for (const [i, el] of u.enumerate(arr)) {
+        assert(i === j)
+
+        assert(arr[i] === el)
+
+        j++
+      }
     })
   })
 })
