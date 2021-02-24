@@ -217,6 +217,54 @@ describe('generators', () => {
       }
     })
   })
+
+  describe('#zip()', () => {
+    it('should work with a single array', () => {
+      const arr = ['42', 'hello', true, -7, { a: null }]
+
+      let j = 0
+
+      for (const [el] of u.zip(arr)) {
+        assert(arr[j] === el)
+
+        j++
+      }
+
+      assert(j === arr.length)
+    })
+
+    it('should work with two arrays', () => {
+      const arr1 = ['42', 'hello', true, -7, { a: null }]
+      const arr2 = [42, 'world', false, 7, { a: undefined }]
+
+      let j = 0
+
+      for (const [el1, el2] of u.zip(arr1, arr2)) {
+        assert(arr1[j] === el1)
+        assert(arr2[j] === el2)
+
+        j++
+      }
+
+      assert(j === arr1.length)
+    })
+
+    it('should work any number of arrays', () => {
+      const n = u.randint(10, 100)
+
+      const arrs = new Array(u.randint(5, 20)).fill(undefined).map(() => new Array(n).fill(undefined).map(() => u.randint(-100, 100)))
+
+      let j = 0
+
+      for (const els of u.zip(...arrs)) {
+        assert(els.every((el, i) => el === arrs[i][j]))
+
+        j++
+      }
+
+      assert(j === arrs[0].length)
+    })
+  })
 })
 
 describe('math', () => {

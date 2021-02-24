@@ -75,6 +75,7 @@ debug.error("Houston, we have a problem!")
 
 - `range(a, b?, c?)`: Implementation of Python's built-in `range` function. Can be used in `for...of` loops
 - `enumerate(arr)`: Implementation of Python's built-in `enumerate` function. Can be used in `for...of` loops
+- `zip(arr1, arr2, ...)`: Implementation of Python's built-in `zip` function. Can be used in `for...of` loops
 
 ### `math`
 
