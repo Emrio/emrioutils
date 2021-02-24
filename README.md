@@ -71,6 +71,10 @@ debug.error("Houston, we have a problem!")
 - `unlink`
 - `writeFile`
 
+### `generators`
+
+- `range(a, b?, c?)`: Implementation of Python's built-in `range` function. Can be used in `for...of` loops
+
 ### `math`
 
 - `avg(arr)`: returns the average value in an array of numbers

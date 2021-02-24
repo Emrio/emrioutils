@@ -1,6 +1,7 @@
 import * as _arr from './arr'
 import { debug, Debugger } from './debug'
 import * as _fs from './fs'
+import * as _generators from './generators'
 import * as _math from './math'
 import * as _misc from './misc'
 import * as _obj from './obj'
@@ -11,6 +12,7 @@ import * as _time from './time'
 export * from './arr'
 export * from './debug'
 export * from './fs'
+export * from './generators'
 export * from './math'
 export * from './misc'
 export * from './obj'
@@ -20,6 +22,7 @@ export * from './time'
 
 export const arr = _arr
 export const fs = _fs
+export const generators = _generators
 export const math = _math
 export const misc = _misc
 export const obj = _obj
@@ -34,6 +37,8 @@ exports.default = {
   Debugger,
   fs,
   ...fs,
+  generators,
+  ...generators,
   math,
   ...math,
   misc,

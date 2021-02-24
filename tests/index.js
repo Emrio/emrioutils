@@ -143,6 +143,80 @@ describe('fs', () => {
   })
 })
 
+describe('generators', () => {
+  describe('#range()', () => {
+    it('should give numbers between 0 and n-1', () => {
+      const n = u.randint(50, 500)
+      let j = 0
+
+      for (const i of u.range(n)) {
+        assert(i === j)
+        j++
+      }
+
+      assert(j === n)
+    })
+
+    it('should give numbers between a and b', () => {
+      const a = u.randint(-100, 0)
+      const b = u.randint(100, 0)
+
+      let j = a
+
+      for (const i of u.range(a, b)) {
+        assert(i === j)
+        j++
+      }
+
+      assert(j === b)
+    })
+
+    it('should give numbers between a and b with a step', () => {
+      const a = u.randint(-100, 0)
+      const b = u.randint(100, 0)
+      const step = u.randint(1, 5)
+
+      let j = a
+
+      for (const i of u.range(a, b, step)) {
+        assert(i === j)
+        j += step
+      }
+
+      assert(j <= b)
+    })
+
+    it('should work with decreasing steps', () => {
+      const a = u.randint(100, 0)
+      const b = u.randint(-100, 0)
+      const step = -u.randint(1, 5)
+
+      let j = a
+
+      for (const i of u.range(a, b, step)) {
+        assert(i === j)
+        j += step
+      }
+
+      assert(j >= b)
+    })
+  })
+
+  describe('#equal()', () => {
+    it('should return true when using the same number', () => {
+      assert.strictEqual(u.math.equal(42.00000001, 42.00000001), true)
+    })
+
+    it('should return true when using the same number (mathematically)', () => {
+      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3), true)
+    })
+
+    it('should return false when precision is not met', () => {
+      assert.strictEqual(u.math.equal(0.1 + 0.2, 0.3 + 0.0001), false)
+    })
+  })
+})
+
 describe('math', () => {
   describe('#avg()', () => {
     it('should give the average of integers', () => {
