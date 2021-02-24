@@ -1,5 +1,23 @@
 # CHANGELOG
 
+## **3.3.0**
+- Added `u.arr.nafum`
+- Better `u.arr.flatten`
+- Better `u.arr.partition`
+- Added `u.fs.isDir`
+- Added `u.fs.rmdir`
+- Better `u.fs.voidDir`
+- Added `u.generators.enumerate`
+- Added `u.generators.range`
+- Added `u.generators.zip`
+- Added `u.math.createLinearTransform`
+- Added `u.math.createLinearTransformND`
+- Added `u.math.equal`
+- Added `u.misc.getSize`
+- Added `u.misc.defaultSizes`
+- Replaced `u.misc.fitFileSize` by `u.misc.fitSize`
+- Test coverage for many functions
+
 ## **3.2.10**
 - Added `u.arr.partition`
 
