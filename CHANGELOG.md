@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.3.1**
+- No longer need to install `@types/debug` in projects using `emrioutils`
+
 ## **3.3.0**
 - Added `u.arr.nafum`
 - Better `u.arr.flatten`
