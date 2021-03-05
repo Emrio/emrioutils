@@ -207,7 +207,7 @@ describe('generators', () => {
 
     it('should give numbers between a and b with a step', () => {
       const a = u.randint(-100, 0)
-      const b = u.randint(100, 0)
+      const b = u.randint(0, 100)
       const step = u.randint(1, 5)
 
       let j = a
@@ -439,6 +439,14 @@ describe('misc', () => {
 
     it('should give a size in "gigaoctets"', () => {
       assert.strictEqual(u.misc.getSize(42 * 1024 * 1024 * 1024, u.misc.defaultSizes.frStorage), '42 Go')
+    })
+  })
+
+  describe('#id()', () => {
+    it('should give exactly the same object', () => {
+      const a = { b: 5, hello: 'world' }
+
+      assert.strictEqual(u.misc.id(a), a)
     })
   })
 })
