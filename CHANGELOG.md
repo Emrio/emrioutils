@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.3.2**
+- Added `u.misc.id`
+
 ## **3.3.1**
 - No longer need to install `@types/debug` in projects using `emrioutils`
 

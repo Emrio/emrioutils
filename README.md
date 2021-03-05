@@ -95,6 +95,7 @@ debug.error("Houston, we have a problem!")
 - `defaultSizes.frStorage`: A list of units used for file storage representation in French (from octets to exaoctets)
 - `defaultSizes.enBandwidth`: A list of units used for bandwidth size representation in English (from bits to exabits)
 - `defaultSizes.frBandwidth`: A list of units used for bandwidth size representation in French (from bits to exabits)
+- `id`: Identity function
 
 ### `obj`
 
