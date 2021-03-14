@@ -1,5 +1,28 @@
 # CHANGELOG
 
+## **3.4.0**
+- Better date representation in `u.debug`
+- Added `u.time.year`
+- Added `u.time.yearPad`
+- Added `u.time.month`
+- Added `u.time.monthPad`
+- Added `u.time.day`
+- Added `u.time.dayPad`
+- Added `u.time.hour`
+- Added `u.time.hourPad`
+- Added `u.time.minute`
+- Added `u.time.minutePad`
+- Added `u.time.second`
+- Added `u.time.secondPad`
+- Better `u.time.ddmmyyyy`
+- Added `u.time.yyyymmdd`
+- Added `u.time.hhmm`
+- Added `u.time.hhmmss`
+- Better `u.time.ddmmyyyyhhmm`
+- Added `u.time.yyyymmddhhmm`
+- Better `u.time.ddmmyyyyhhmmss`
+- Added `u.time.yyyymmddhhmmss`
+
 ## **3.3.2**
 - Added `u.misc.id`
 

@@ -33,7 +33,7 @@ import u = require('emrioutils')
 
 ## Available functions
 
-**\***: Untested function
+**\***: Untested function (currently none 🎉)
 
 ### `arr`
 
@@ -118,11 +118,28 @@ debug.error("Houston, we have a problem!")
 
 ### `time`
 
-- **\*** `ddmmyyyy(separation?, date?)`: Returns a string that represent the date
-- **\*** `ddmmyyyyhhmm(separation?, date?)`: Returns a string that represent the date
-- **\*** `ddmmyyyyhhmmss(separation?, date?)`: Returns a string that represent the date
 - `hr2ms(hrtime)`: Converts `process.hrtime()` data to milliseconds
 - `sleep(delay)`: Returns a promise that will be resolved after `delay` ms
+- `year(date?)`: Get year
+- `yearPad(date?)`: Get padded year
+- `month(date?)`: Get month
+- `monthPad(date?)`: Get padded month
+- `day(date?)`: Get day
+- `dayPad(date?)`: Get padded day
+- `hour(date?)`: Get hour
+- `hourPad(date?)`: Get padded hour
+- `minute(date?)`: Get minute
+- `minutePad(date?)`: Get padded minute
+- `second(date?)`: Get second
+- `secondPad(date?)`: Get padded second
+- `hhmm(separation?, date?)`: Returns a string that represent the date
+- `hhmmss(separation?, date?)`: Returns a string that represent the date
+- `ddmmyyyy(separation?, date?)`: Returns a string that represent the date
+- `yyyymmdd(separation?, date?)`: Returns a string that represent the date
+- `ddmmyyyyhhmm(separation?, date?)`: Returns a string that represent the date
+- `yyyymmddhhmm(separation?, date?)`: Returns a string that represent the date
+- `ddmmyyyyhhmmss(separation?, date?)`: Returns a string that represent the date
+- `yyyymmddhhmmss(separation?, date?)`: Returns a string that represent the date
 
 ## Notes
 
