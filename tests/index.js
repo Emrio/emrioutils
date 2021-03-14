@@ -568,4 +568,88 @@ describe('time', () => {
       assert.strictEqual(t2 - t1 <= 210, true)
     })
   })
+
+  describe('#custom', async () => {
+    const date = new Date(192693601000)
+
+    it('should give the year', () => {
+      assert.strictEqual(1976, u.time.year(date))
+    })
+
+    it('should give the year as string', () => {
+      assert.strictEqual('1976', u.time.yearPad(date))
+    })
+
+    it('should give the month', () => {
+      assert.strictEqual(2, u.time.month(date))
+    })
+
+    it('should give the month as string', () => {
+      assert.strictEqual('02', u.time.monthPad(date))
+    })
+
+    it('should give the day', () => {
+      assert.strictEqual(9, u.time.day(date))
+    })
+
+    it('should give the day as string', () => {
+      assert.strictEqual('09', u.time.dayPad(date))
+    })
+
+    it('should give the hour', () => {
+      assert.strictEqual(7, u.time.hour(date))
+    })
+
+    it('should give the hour as string', () => {
+      assert.strictEqual('07', u.time.hourPad(date))
+    })
+
+    it('should give the minute', () => {
+      assert.strictEqual(0, u.time.minute(date))
+    })
+
+    it('should give the minute as string', () => {
+      assert.strictEqual('00', u.time.minutePad(date))
+    })
+
+    it('should give the second', () => {
+      assert.strictEqual(1, u.time.second(date))
+    })
+
+    it('should give the second as string', () => {
+      assert.strictEqual('01', u.time.secondPad(date))
+    })
+
+    it('should give the date as ddmmyyyy format', () => {
+      assert.strictEqual('09.02.1976', u.time.ddmmyyyy('.', date))
+    })
+
+    it('should give the date as yyyymmdd format', () => {
+      assert.strictEqual('1976.02.09', u.time.yyyymmdd('.', date))
+    })
+
+    it('should give the date as hhmm format', () => {
+      assert.strictEqual('07.00', u.time.hhmm('.', date))
+    })
+
+    it('should give the date as hhmmss format', () => {
+      assert.strictEqual('07.00.01', u.time.hhmmss('.', date))
+    })
+
+    it('should give the date as ddmmyyyyhhmm format', () => {
+      assert.strictEqual('09.02.1976.07.00', u.time.ddmmyyyyhhmm('.', date))
+    })
+
+    it('should give the date as yyyymmddhhmm format', () => {
+      assert.strictEqual('1976.02.09.07.00', u.time.yyyymmddhhmm('.', date))
+    })
+
+    it('should give the date as ddmmyyyyhhmmss format', () => {
+      assert.strictEqual('09-02-1976-07-00-01', u.time.ddmmyyyyhhmmss('-', date))
+    })
+
+    it('should give the date as yyyymmddhhmmss format', () => {
+      assert.strictEqual('1976-02-09-07-00-01', u.time.yyyymmddhhmmss('-', date))
+    })
+  })
 })
