@@ -8,6 +8,7 @@ import * as _obj from './obj'
 import * as _rnd from './rnd'
 import * as _str from './str'
 import * as _time from './time'
+import * as _types from './types'
 
 export * from './arr'
 export * from './debug'
@@ -19,6 +20,7 @@ export * from './obj'
 export * from './rnd'
 export * from './str'
 export * from './time'
+export * from './types'
 
 export const arr = _arr
 export const fs = _fs
