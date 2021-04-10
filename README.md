@@ -77,7 +77,7 @@ debug.error("Houston, we have a problem!")
 
 - `range(a, b?, c?)`: Implementation of Python's built-in `range` function. Can be used in `for...of` loops
 - `enumerate(arr)`: Implementation of Python's built-in `enumerate` function. Can be used in `for...of` loops
-- `iterkv(obj)`: Loops through key/value pairs of an object. Can be used in `for...of` loops
+- **\*** `iterkv(obj)`: Loops through key/value pairs of an object. Can be used in `for...of` loops
 - `zip(arr1, arr2, ...)`: Implementation of Python's built-in `zip` function. Can be used in `for...of` loops
 
 ### `math`
@@ -102,7 +102,7 @@ debug.error("Houston, we have a problem!")
 
 - `ExtensibleFunction`: A class for making callable objects
 - `makeShallowCopy(dest, src, replace?)`: Copy properties from source object to destination object
-- `mapKey(obj, mapperFunc, thisArg?)`: Like `Array.prototype.map` but for object properties
+- **\*** `mapKey(obj, mapperFunc, thisArg?)`: Like `Array.prototype.map` but for object properties
 - `resolveObjectProperty(obj, path)`: Returns the value of a path in an object
 
 ### `rnd`

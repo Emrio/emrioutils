@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.5.0**
+- Added `u.generators.iterkv`
+- Added `u.obj.mapKey`
+
 ## **3.4.0**
 - Better date representation in `u.debug`
 - Added `u.time.year`
