@@ -101,6 +101,7 @@ debug.error("Houston, we have a problem!")
 
 - `ExtensibleFunction`: A class for making callable objects
 - `makeShallowCopy(dest, src, replace?)`: Copy properties from source object to destination object
+- `mapKey(obj, mapperFunc, thisArg?)`: Like `Array.prototype.map` but for object properties
 - `resolveObjectProperty(obj, path)`: Returns the value of a path in an object
 
 ### `rnd`
