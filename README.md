@@ -33,14 +33,19 @@ import u = require('emrioutils')
 
 ## Available functions
 
-**\***: Untested function (currently none 🎉)
+**\***: Untested function
 
 ### `arr`
 
+- **\*** `binarySearch(arr, x, cmpFunc?)`: Tests if x is an element of given array
+- **\*** `binarySearchIndex(arr, x, cmpFunc?)`: Find index of element in sorted array. Returns -1 if x is not in the array
 - `flatten(arr, depth?)`: Array.flat implementation. Flatten the curve!
 - `last(arr, shift?)`: Returns the length-shift element of the array
 - `nafum(n, fillerFunction)`: Shortcut for `new Array(n).fill(undefined).map(fillerFunction)`. Filler function only has an index argument.
 - `partition(arr, partitionerFunction)`: Partitions an array into sub-arrays. Returns an object of arrays.
+- **\*** `rmfast(arr, i)`: Removes an element in a timely manner. Order of elements is not conserved
+- **\*** `swap(arr, i, j)`: Swaps the position of two elements in an array given their indices
+- **\*** `unique(arr)`: Removes all duplicates in an array. Order of first apparition may not be conserved
 
 ### `debug`
 
@@ -101,6 +106,8 @@ debug.error("Houston, we have a problem!")
 ### `obj`
 
 - `ExtensibleFunction`: A class for making callable objects
+- **\*** `hasOwnProperty(obj, prop)`: Shortcut for `Object.prototype.hasOwnProperty.call(obj, prop)`
+- **\*** `hop(obj, prop)`: Same, but shortcuter
 - `makeShallowCopy(dest, src, replace?)`: Copy properties from source object to destination object
 - **\*** `mapKey(obj, mapperFunc, thisArg?)`: Like `Array.prototype.map` but for object properties
 - `resolveObjectProperty(obj, path)`: Returns the value of a path in an object

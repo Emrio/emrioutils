@@ -1,5 +1,12 @@
 # CHANGELOG
 
+## **3.6.0**
+- Added `u.arr.binarySearch`
+- Added `u.arr.rmfast`
+- Added `u.arr.swap`
+- Added `u.arr.unique`
+- Added `u.obj.hasOwnProperty` and shortcut `u.obj.hop`
+
 ## **3.5.0**
 - Added `u.generators.iterkv`
 - Added `u.obj.mapKey`
