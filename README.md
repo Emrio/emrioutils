@@ -158,11 +158,11 @@ Future versions may include breaking changes if they fit my needs. Nonetheless f
 Feel free to post some suggestions and/or questions in the [Issues Page][issues-url]
 
 [npm-package-url]: https://www.npmjs.com/package/emrioutils
-[license-url]: https://raw.githubusercontent.com/TheEmrio/emrioutils/master/LICENSE
+[license-url]: https://raw.githubusercontent.com/Emrio/emrioutils/master/LICENSE
 [site-url]: https://emrio.fr/
-[github-url]: https://github.com/TheEmrio/emrioutils
-[changelog-url]: https://github.com/TheEmrio/emrioutils/blob/master/CHANGELOG.md
-[issues-url]: https://github.com/TheEmrio/emrioutils/issues/
+[github-url]: https://github.com/Emrio/emrioutils
+[changelog-url]: https://github.com/Emrio/emrioutils/blob/master/CHANGELOG.md
+[issues-url]: https://github.com/Emrio/emrioutils/issues/
 
 [version-img]: https://img.shields.io/npm/v/emrioutils.svg
 [license-img]: https://img.shields.io/npm/l/emrioutils.svg

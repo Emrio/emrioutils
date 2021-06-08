@@ -273,5 +273,3 @@
 + Added `AkwardArray` Object (not in use)
 + Added `mean()` function
 + Added `equalArrays()` function
-
-[docs-url]: https://github.com/TheEmrio/emrioutils/blob/master/docs/README.md
