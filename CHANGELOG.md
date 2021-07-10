@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.6.1**
+- Bugfixes
+
 ## **3.6.0**
 - Added `u.arr.binarySearch`
 - Added `u.arr.rmfast`

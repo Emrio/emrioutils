@@ -1,4 +1,6 @@
-const defaultComparator = <T> (a: T, b: T): boolean => a > b
+import { id } from '../misc/id'
+
+type Cast <T, TT> = (a: T) => TT
 
 /**
  * binarySearchIndex - Returns the index of an element in a sorted array
@@ -8,7 +10,11 @@ const defaultComparator = <T> (a: T, b: T): boolean => a > b
  * string or number. This comparator should test if first argument is strictly
  * greater than the second argument.
  */
-export function binarySearchIndex <T> (arr: T[], x: T, comp = defaultComparator): number {
+export function binarySearchIndex <T, TT> (arr: T[], x: TT, key?: Cast<T, TT>): number {
+  if (!key) {
+    key = id as Cast<T, TT>
+  }
+
   // [a, b[
   let a = 0
   let b = arr.length
@@ -17,20 +23,20 @@ export function binarySearchIndex <T> (arr: T[], x: T, comp = defaultComparator)
     const s = b - a
     const c = a + (s - (s & 1)) / 2
 
-    if (x === arr[c]) {
+    if (x === key(arr[c])) {
       return c
     }
 
-    if (comp(x, arr[c])) {
+    if (x > key(arr[c])) {
       a = c + 1
     } else {
       b = c
     }
   }
 
-  return x === arr[a] ? a : -1
+  return x === key(arr[a]) ? a : -1
 }
 
-export function binarySearch <T> (arr: T[], x: T, comp = defaultComparator): boolean {
-  return binarySearchIndex(arr, x, comp) !== -1
+export function binarySearch <T, TT> (arr: T[], x: TT, key?: Cast<T, TT>): boolean {
+  return binarySearchIndex(arr, x, key) !== -1
 }
