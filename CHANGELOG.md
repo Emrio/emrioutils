@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.7.0**
+- Added `u.obj.arr2obj`
+- Added `u.obj.arr2objmap`
+
 ## **3.6.1**
 - Bugfixes
 
