@@ -1,5 +1,8 @@
 # CHANGELOG
 
+## **3.8.0**
+- Added `u.rnd.randUniqueList`
+
 ## **3.7.0**
 - Added `u.obj.arr2obj`
 - Added `u.obj.arr2objmap`
