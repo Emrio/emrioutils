@@ -7,7 +7,7 @@ export function createLinearTransform (source1: number, source2: number, dest1: 
   const a = (dest2 - dest1) / (source2 - source1)
   const b = (dest1 * source2 - source1 * dest2) / (source2 - source1)
 
-  return x => a * x + b
+  return (x): number => a * x + b
 }
 
 export function createLinearTransformND (source1: number[], source2: number[], dest1: number[], dest2: number[]): (x: number[]) => number[] {

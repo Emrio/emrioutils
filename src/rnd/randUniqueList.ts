@@ -7,7 +7,7 @@
  *
  * For random functions that take parameters, please bind first
  */
-export function randUniqueList <T> (rand: () => T, n: number, maxWithdraws: number = Infinity): T[] {
+export function randUniqueList <T> (rand: () => T, n: number, maxWithdraws = Infinity): T[] {
   const vals = new Set<T>()
   let tries = 0
 

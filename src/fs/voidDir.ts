@@ -6,7 +6,7 @@ import { readdir, unlink, stat, rmdir } from './fsPromisified'
  * May do so recursively
  * May also remove sub directories
  */
-export async function voidDir (dirpath: string, recursive: boolean = false, deleteSubDirectories: boolean = false): Promise<void> {
+export async function voidDir (dirpath: string, recursive = false, deleteSubDirectories = false): Promise<void> {
   const files = await readdir(dirpath)
 
   const paths = files.map(file => path.join(dirpath, file))

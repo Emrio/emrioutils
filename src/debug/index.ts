@@ -10,7 +10,7 @@ const logLevelToText = { log: 'INFO', warn: 'WARN', error: 'ERR ' }
 let writing = false
 const queue: string[] = []
 
-async function flushQueue () {
+async function flushQueue (): Promise<void> {
   if (writing || queue.length === 0 || !process.env.EMRIOUTILS_LOG_PATH) return
   writing = true
   const toadd = queue.join('')
@@ -27,7 +27,7 @@ async function flushQueue () {
 
 function createDebugger (p: string, level: LogLevel): debug.Debugger {
   const log = debugbase(p)
-  log.log = (...lines) => {
+  log.log = (...lines): void => {
     const tolog = lines.join(' ')
     const log = `${yyyymmddhhmmss()}|${logLevelToText[level]}|${tolog}\n`
     console[level](...lines)

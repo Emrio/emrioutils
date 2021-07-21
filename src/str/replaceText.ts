@@ -5,7 +5,7 @@
 
 type AllowedTypes = string | number | boolean
 
-export function replaceText (t: string, w: { [k: string]: AllowedTypes }, replaceAllOccurences: boolean = false): string {
+export function replaceText (t: string, w: { [k: string]: AllowedTypes }, replaceAllOccurences = false): string {
   for (const k in w) {
     t = t.replace(replaceAllOccurences ? new RegExp(`{${k}}`, 'g') : `{${k}}`, w[k].toString())
   }

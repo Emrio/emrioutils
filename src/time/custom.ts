@@ -86,55 +86,55 @@ export function secondPad (date: Date = new Date()): string {
 /**
  * ddmmyyyy - Returns a custom string that represent the given date
  */
-export function ddmmyyyy (separation: string = '-', date: Date = new Date()): string {
+export function ddmmyyyy (separation = '-', date: Date = new Date()): string {
   return [dayPad(date), monthPad(date), yearPad(date)].join(separation)
 }
 
 /**
  * ddmmyyyy - Returns a custom string that represent the given date
  */
-export function yyyymmdd (separation: string = '-', date: Date = new Date()): string {
+export function yyyymmdd (separation = '-', date: Date = new Date()): string {
   return [yearPad(date), monthPad(date), dayPad(date)].join(separation)
 }
 
 /**
  * hhmm - Returns a custom string that represent the given date
  */
-export function hhmm (separation: string = '-', date: Date = new Date()): string {
+export function hhmm (separation = '-', date: Date = new Date()): string {
   return [hourPad(date), minutePad(date)].join(separation)
 }
 
 /**
  * hhmmss - Returns a custom string that represent the given date
  */
-export function hhmmss (separation: string = '-', date: Date = new Date()): string {
+export function hhmmss (separation = '-', date: Date = new Date()): string {
   return [hhmm(separation, date), secondPad(date)].join(separation)
 }
 
 /**
  * ddmmyyyyhhmm - Returns a custom string that represent the given date
  */
-export function ddmmyyyyhhmm (separation: string = '-', date: Date = new Date()): string {
+export function ddmmyyyyhhmm (separation = '-', date: Date = new Date()): string {
   return ddmmyyyy(separation, date) + separation + hhmm(separation, date)
 }
 
 /**
  * yyyymmddhhmm - Returns a custom string that represent the given date
  */
-export function yyyymmddhhmm (separation: string = '-', date: Date = new Date()): string {
+export function yyyymmddhhmm (separation = '-', date: Date = new Date()): string {
   return yyyymmdd(separation, date) + separation + hhmm(separation, date)
 }
 
 /**
  * ddmmyyyyhhmmss - Returns a custom string that represent the given date
  */
-export function ddmmyyyyhhmmss (separation: string = '-', date: Date = new Date()): string {
+export function ddmmyyyyhhmmss (separation = '-', date: Date = new Date()): string {
   return ddmmyyyy(separation, date) + separation + hhmmss(separation, date)
 }
 
 /**
  * yyyymmddhhmm - Returns a custom string that represent the given date
  */
-export function yyyymmddhhmmss (separation: string = '-', date: Date = new Date()): string {
+export function yyyymmddhhmmss (separation = '-', date: Date = new Date()): string {
   return yyyymmdd(separation, date) + separation + hhmmss(separation, date)
 }

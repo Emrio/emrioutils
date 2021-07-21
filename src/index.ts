@@ -8,7 +8,6 @@ import * as _obj from './obj'
 import * as _rnd from './rnd'
 import * as _str from './str'
 import * as _time from './time'
-import * as _types from './types'
 
 export * from './arr'
 export * from './debug'

@@ -1,3 +1,7 @@
-export type Key = number | symbol | string
+export type Key = number | symbol | string // keyof any
 
-export type KVPairs <K extends Key, V> = { [k in K]: V }
+export type nOpt <T> = T | null
+
+export type uOpt <T> = T | undefined
+
+export type nuOpt <T> = nOpt<T> | uOpt<T>
