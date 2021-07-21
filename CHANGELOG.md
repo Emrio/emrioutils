@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.7.0**
+- Added `u.obj.pourkv`
+- Added `u.obj.mergekv`
+
 ## **3.6.3**
 - Added `u.rnd.randUniqueList`
 
