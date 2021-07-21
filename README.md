@@ -109,7 +109,11 @@ debug.error("Houston, we have a problem!")
 - **\*** `hasOwnProperty(obj, prop)`: Shortcut for `Object.prototype.hasOwnProperty.call(obj, prop)`
 - **\*** `hop(obj, prop)`: Same, but shortcuter
 - `makeShallowCopy(dest, src, replace?)`: Copy properties from source object to destination object
+- **\*** `arr2obj(arr, mapper)`: Convert an array to a key-value object by mapping each element to a key
+- **\*** `arr2objmap(arr, mapper)`: Convert an array to a key-value object by mapping each  element to a key+value pair
 - **\*** `mapKey(obj, mapperFunc, thisArg?)`: Like `Array.prototype.map` but for object properties
+- **\*** `pourkv(collisionResolver, dst, ...src)`: Pour key-value pairs from source objects into another object
+- **\*** `mergekv(collisionResolver, ...src)`: Merge key-value pairs from source objects into a new object
 - `resolveObjectProperty(obj, path)`: Returns the value of a path in an object
 
 ### `rnd`
@@ -118,6 +122,7 @@ debug.error("Houston, we have a problem!")
 - `randhex(length)`: Generates a random hexadecimal string
 - `randhex(a, b)`: Generates a random hexadecimal string of pseudo-random length
 - `randint(a, b, includeB?)`: Generate a pseudo-random integer from a to b
+- **\*** `randUniqueList(rand, n, maxWithdraws?)`: Generate a list of unique random values poured from the `rand` function
 
 ### `str`
 
