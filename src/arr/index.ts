@@ -1,5 +1,6 @@
 export * from './binarySearch'
 export * from './flatten'
+export * from './inter'
 export * from './last'
 export * from './nafum'
 export * from './partition'

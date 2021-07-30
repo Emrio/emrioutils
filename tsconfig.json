@@ -4,7 +4,7 @@
     "target": "es5",
     "allowJs": false,
     "outDir": "./build",
-    "removeComments": true,
+    "removeComments": false,
     "strict": true,
     "noEmitOnError": true,
     "noImplicitReturns": true,

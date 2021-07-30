@@ -1,5 +1,9 @@
 # CHANGELOG
 
+## **3.8.0**
+- Added `u.arr.inter`
+- Added `u.obj.filterObj`
+
 ## **3.7.0**
 - Added `u.obj.pourkv`
 - Added `u.obj.mergekv`

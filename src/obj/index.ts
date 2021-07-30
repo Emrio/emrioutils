@@ -1,5 +1,6 @@
 export * from './arr2obj'
 export * from './ExtensibleFunction'
+export * from './filterObj'
 export { hasOwnProperty, hasOwnProperty as hop } from './hasOwnProperty'
 export * from './makeShallowCopy'
 export * from './mapKey'
