@@ -3,7 +3,7 @@
 [Site][site-url] |
 [Changelog][changelog-url] |
 [Github][github-url] |
-[NPM][npm-package-url]
+[NPM][npm-package-url] |
 [Docs][docs-url]
 
 ## Installing
