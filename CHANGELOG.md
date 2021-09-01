@@ -1,5 +1,10 @@
 # CHANGELOG
 
+## **4.0.0**
+- Removed the concept of "namespaces" like `obj`, `arr`, etc...
+- Added `u.n`, `u.u`
+- Added `u.inter`
+
 ## **3.8.0**
 - Added `u.arr.inter`
 - Added `u.obj.filterObj`

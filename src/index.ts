@@ -1,55 +1,48 @@
-import * as _arr from './arr'
-import { debug, Debugger } from './debug'
-import * as _fs from './fs'
-import * as _generators from './generators'
-import * as _math from './math'
-import * as _misc from './misc'
-import * as _obj from './obj'
-import * as _rnd from './rnd'
-import * as _str from './str'
-import * as _time from './time'
-
-export * from './arr'
+export * from './arr2obj'
+export * from './avg'
+export * from './bases'
+export * from './binarySearch'
+export * from './cfl'
 export * from './debug'
-export * from './fs'
-export * from './generators'
-export * from './math'
-export * from './misc'
-export * from './obj'
-export * from './rnd'
-export * from './str'
-export * from './time'
+export * from './digitalSizes'
+export * from './enumerate'
+export * from './equal'
+export * from './ExtensibleFunction'
+export * from './fileExists'
+export * from './filterObj'
+export * from './flatten'
+export * from './fsPromisified'
+export * from './hop'
+export * from './hr2ms'
+export * from './id'
+export * from './inter'
+export * from './isDir'
+export * from './iterkv'
+export * from './last'
+export * from './linearTransform'
+export * from './makeShallowCopy'
+export * from './mapKey'
+export * from './mergekv'
+export * from './nafum'
+export * from './partition'
+export * from './rand'
+export * from './randfloat'
+export * from './randhex'
+export * from './randint'
+export * from './randstring'
+export * from './randUniqueList'
+export * from './range'
+export * from './replaceText'
+export * from './resolveObjectProperty'
+export * from './rmfast'
+export * from './round'
+export * from './setmanip'
+export * from './sleep'
+export * from './splice'
+export * from './split'
+export * from './swap'
+export * from './timemanip'
 export * from './types'
-
-export const arr = _arr
-export const fs = _fs
-export const generators = _generators
-export const math = _math
-export const misc = _misc
-export const obj = _obj
-export const rnd = _rnd
-export const str = _str
-export const time = _time
-
-exports.default = {
-  arr,
-  ...arr,
-  debug,
-  Debugger,
-  fs,
-  ...fs,
-  generators,
-  ...generators,
-  math,
-  ...math,
-  misc,
-  ...misc,
-  obj,
-  ...obj,
-  rnd,
-  ...rnd,
-  str,
-  ...str,
-  time,
-  ...time
-}
+export * from './unique'
+export * from './voidDir'
+export * from './zip'

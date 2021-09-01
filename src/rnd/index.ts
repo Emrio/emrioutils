@@ -1,6 +1,0 @@
-export * from './rand'
-export * from './randfloat'
-export * from './randhex'
-export * from './randint'
-export * from './randstring'
-export * from './randUniqueList'

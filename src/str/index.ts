@@ -1,5 +1,0 @@
-export * from './bases'
-export { capitalizeFirstLetter, capitalizeFirstLetter as cfl } from './capitalizeFirstLetter'
-export * from './replaceText'
-export * from './splice'
-export * from './split'
