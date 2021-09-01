@@ -4,6 +4,7 @@
 [Changelog][changelog-url] |
 [Github][github-url] |
 [NPM][npm-package-url]
+[Docs][docs-url]
 
 ## Installing
 
@@ -58,6 +59,7 @@ Future versions may include breaking changes if they fit my needs. Nonetheless f
 
 Feel free to post some suggestions and/or questions in the [Issues Page][issues-url]
 
+[docs-url]: https://emrio.github.io/emrioutils
 [npm-package-url]: https://www.npmjs.com/package/emrioutils
 [license-url]: https://raw.githubusercontent.com/Emrio/emrioutils/master/LICENSE
 [site-url]: https://emrio.fr/
