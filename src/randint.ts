@@ -8,8 +8,6 @@ export function randint (length: number, includeTo?: boolean): number
  * This function is not cryptographically secure
  */
 export function randint (fromOrLength: number, toOrIncludeTo?: number | boolean, includeTo?: boolean): number {
-
-
   if (typeof toOrIncludeTo === 'undefined' || typeof toOrIncludeTo === 'boolean') {
     return randint(0, fromOrLength, toOrIncludeTo)
   }

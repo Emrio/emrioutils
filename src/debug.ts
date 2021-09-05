@@ -11,37 +11,45 @@ let writing = false
 const queue: string[] = []
 
 async function flushQueue (): Promise<void> {
-  if (writing || queue.length === 0 || !process.env.EMRIOUTILS_LOG_PATH) return
+  if (writing || queue.length === 0 || !process.env.EMRIOUTILS_LOG_PATH) {
+    return
+  }
+
   writing = true
   const toadd = queue.join('')
   queue.length = 0
+
   try {
     await appendFile(path.join(process.env.EMRIOUTILS_LOG_PATH, yyyymmdd() + '.log'), toadd)
   } catch (e) {
     console.warn("WARNING: Couldn't save logs to a file", e)
     return
   }
+
   writing = false
   flushQueue()
 }
 
-function createDebugger (p: string, level: LogLevel): debug.Debugger {
+function createDebugger (p: string, level: LogLevel): debugbase.Debugger {
   const log = debugbase(p)
+
   log.log = (...lines): void => {
     const tolog = lines.join(' ')
-    const log = `${yyyymmddhhmmss()}|${logLevelToText[level]}|${tolog}\n`
+    const message = `${yyyymmddhhmmss()}|${logLevelToText[level]}|${tolog}\n`
     console[level](...lines)
-    queue.push(log)
+
+    queue.push(message)
     flushQueue()
   }
+
   return log
 }
 
 /**
  * Creates a debugger instance
  */
-export class Debugger extends ExtensibleFunction {
-  public error: debug.Debugger // Prints data as error
+export class Debugger extends ExtensibleFunction <debugbase.Debugger> {
+  public error: debugbase.Debugger // Prints data as error
 
   constructor (debuggerIdentifier: string) {
     super(createDebugger(debuggerIdentifier, 'log'))

@@ -10,7 +10,6 @@ export async function fileExists (path: string): Promise<boolean> {
 
     return true
   } catch (e) {
-
     return false
   }
 }

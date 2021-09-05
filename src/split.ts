@@ -3,6 +3,10 @@
  */
 export function split (str: string, delimitor: string, limit: number): string[] {
   const parts = str.split(delimitor)
-  if (parts.length <= limit) return parts
+
+  if (parts.length <= limit) {
+    return parts
+  }
+
   return [...parts.slice(0, limit - 1), parts.slice(limit - 1).join(delimitor)]
 }

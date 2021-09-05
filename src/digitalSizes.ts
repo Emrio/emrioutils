@@ -20,14 +20,17 @@ export function fitSize (size: number, units: string[] = defaultSizes.enStorage)
     i++
   }
 
-  return { value: round(size / Math.pow(1024, i), 2), unit: units[i] }
+  return {
+    value: round(size / Math.pow(1024, i), 2),
+    unit: units[i]
+  }
 }
 
 /**
  * Get a string representing the size best
  */
 export function getSize (size: number, units: string[] = defaultSizes.enStorage): string {
-  const fit = fitSize(size, units)
+  const { value, unit } = fitSize(size, units)
 
-  return fit.value + ' ' + fit.unit
+  return value + ' ' + unit
 }
