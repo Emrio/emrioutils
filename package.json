@@ -6,9 +6,10 @@
   "types": "build/index.d.ts",
   "scripts": {
     "build": "tsc",
-    "prepublishOnly": "tsc",
+    "prepublishOnly": "rm -r build && tsc",
     "test": "mocha tests/index.js",
-    "lint": "eslint src --ext .ts"
+    "lint": "eslint src --ext .ts",
+    "docs": "npx typedoc src/index.ts --disableSources --theme minimal"
   },
   "keywords": [
     "utility",
