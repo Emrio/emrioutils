@@ -6,3 +6,5 @@ tests
 src
 others
 tsconfig.tsbuildinfo
+docs
+CHANGELOG.md
