@@ -8,3 +8,4 @@ others
 tsconfig.tsbuildinfo
 docs
 CHANGELOG.md
+.eslintrc.json
