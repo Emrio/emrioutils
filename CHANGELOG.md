@@ -1,5 +1,18 @@
 # CHANGELOG
 
+## **4.0.4**
+- Fixed `ExtensibleFunction`
+
+## **4.0.3**
+- Internal code updates
+
+## **4.0.2**
+- Fixed import syntax `import u from 'emrioutils'` on TypeScript
+- Internal code updates
+
+## **4.0.1**
+- Internal code updates
+
 ## **4.0.0**
 - Removed the concept of "namespaces" like `obj`, `arr`, etc...
 - Added `u.n`, `u.u`
