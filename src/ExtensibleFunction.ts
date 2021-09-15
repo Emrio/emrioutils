@@ -1,4 +1,3 @@
-
 export interface ExtensibleFunction <F extends (...args: any) => any> {
   new (f: F): ExtensibleFunction<F>
   (...args: Parameters<F>): ReturnType<F>
@@ -11,6 +10,6 @@ export class ExtensibleFunction <F extends (...args: any) => any> extends Functi
   constructor (f: F) {
     super()
 
-    Object.setPrototypeOf(f, new.target.prototype)
+    return Object.setPrototypeOf(f, new.target.prototype)
   }
 }
